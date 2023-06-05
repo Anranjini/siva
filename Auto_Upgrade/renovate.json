@@ -2,19 +2,7 @@
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": ["config:base"],
   
-   "packageRules": [
-    {
-      "matchDatasources": [
-        "maven"
-      ],
-      "matchUpdateTypes": [
-        "major",
-        "minor",
-        "patch"
-       
-      ]
-      }
-      ],
+   
       "platform": "github",
   "repositories": [
     {
