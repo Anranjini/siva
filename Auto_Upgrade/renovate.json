@@ -3,15 +3,24 @@
   "extends": ["config:base"],
   
    
-      "platform": "github",
-  "repositories": [
+
+  "packageManagers": [
     {
-      "repository": "https://github.com/Anranjini/updateversion.git",
-      "depName": "org.springframework.boot:spring-boot-starter-parent",
-      "versioning": "range",
-      "rangeStrategy": "bump",
-      "range": "[1.0.0,3.0.0)",
-      "packageFiles": ["pom.xml"]
+      "packageManager": "maven",
+      "depTypeList": ["maven"]
+    }
+  ],
+  "schedule": ["now"],
+  "versioning": {
+    "default": "auto"
+},
+  "packageRules": [
+    {
+      "matchPackagePatterns": ["pom.xml"],
+      "enabled": true,
+      "automerge": true,
+      "automergeType": "pr"
     }
   ]
 }
+
